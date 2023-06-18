@@ -1,0 +1,401 @@
+$bg-color: #f7f7f7; // Seasalt
+$light-bg-color: #efefef; // Platinum
+$text-color: #4c5760; // Outer space
+$primary-color: #73956f; // Asparagus
+$secondary-color: #3777ff; // Crayola blue
+$tertiary-color: #bb4430; // Persian Red
+$input-bg-color: #E9EBF8; // Lavender
+
+$border-radius: 6px;
+
+html {
+	background-color: $bg-color;
+	font-family: 'Poppins',
+		sans-serif;
+	color: $text-color;
+}
+
+header {
+	text-align: center;
+}
+
+main {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: flex-start;
+	padding: 0px;
+	gap: 32px;
+
+	flex: none;
+	order: 1;
+	flex-grow: 0;
+}
+
+h1 {
+	color: $primary-color;
+}
+
+.btn-primary {
+	display: block;
+	height: auto;
+	width: 468px;
+	color: white;
+	background-color: $primary-color;
+	font-family: 'Poppins', sans-serif;
+	font-size: 1rem;
+	text-decoration: none;
+	text-align: center;
+	border: none;
+	border-radius: $border-radius*1.5;
+	padding: 8px 16px;
+	margin-top: 16px;
+
+	transition: ease-in-out .1s;
+
+	&:hover {
+		opacity: 75%;
+		transition: ease-in-out .1s;
+	}
+}
+
+.btn-secondary {
+	display: block;
+	height: auto;
+	width: 240px;
+
+	color: $text-color;
+	background-color: $bg-color;
+
+	font-family: 'Poppins', sans-serif;
+	font-size: 1rem;
+	text-decoration: none;
+	text-align: center;
+
+	border: 2px solid $primary-color;
+	border-radius: $border-radius;
+	padding: 8px 16px;
+	margin: auto;
+
+	transition: ease-in-out .1s;
+
+	&:hover {
+		background-color: $input-bg-color;
+		transition: ease-in-out .1s;
+	}
+}
+
+.item-card {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 24px;
+	gap: 12px;
+	isolation: isolate;
+
+	width: 452px;
+	height: auto;
+
+	background: #FFFFFF;
+
+	box-shadow: 0px 4px 8px rgba(119, 119, 119, 0.4);
+	border-radius: $border-radius*1.5;
+
+	flex: none;
+	order: 1;
+	flex-grow: 0;
+
+	.item-card-title {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		padding: 4px 20px 4px 0px;
+
+		width: 452px;
+		height: 44px;
+
+		border-radius: 6px;
+
+		flex: none;
+		align-self: stretch;
+		flex-grow: 0;
+		z-index: 0;
+
+		p {
+			width: 226px;
+			height: 36px;
+
+			font-family: 'Poppins';
+			font-style: normal;
+			font-weight: 700;
+			font-size: 24px;
+			line-height: 36px;
+
+			color: #4C5760;
+
+			flex: none;
+			order: 0;
+			flex-grow: 0;
+		}
+	}
+
+	.material {
+		display: flex;
+		flex-direction: row;
+		align-items: flex-start;
+		padding: 0px;
+		gap: 4px;
+
+		width: 452px;
+		height: 44px;
+
+		flex: none;
+		align-self: stretch;
+		flex-grow: 0;
+		z-index: 1;
+
+		.material-img {
+			width: 44px;
+			height: 44px;
+
+			border-radius: 100px;
+
+			background-color: $light-bg-color;
+
+			flex: none;
+			order: 0;
+			flex-grow: 0;
+		}
+
+		.material-name {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			padding: 10px 8px;
+			gap: 10px;
+
+			width: 271px;
+			height: 24px;
+
+			background: $light-bg-color;
+			border-radius: $border-radius;
+
+			flex: none;
+			order: 1;
+			flex-grow: 1;
+
+			p {
+				font-family: 'Poppins';
+				font-style: normal;
+				font-weight: 500;
+				font-size: 16px;
+
+				color: $text-color;
+
+				flex: none;
+				order: 0;
+				flex-grow: 0;
+			}
+		}
+
+		.material-amount {
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			align-items: center;
+			padding: 6px;
+			gap: 6px;
+
+			width: 53px;
+			height: 32px;
+
+			background: $light-bg-color;
+			border-radius: $border-radius;
+
+			flex: none;
+			order: 2;
+			flex-grow: 0;
+
+			p {
+				width: 32px;
+				height: 24px;
+
+				font-family: 'Poppins';
+				font-style: normal;
+				font-weight: 500;
+				font-size: 16px;
+				line-height: 24px;
+
+				display: flex;
+				align-items: flex-end;
+				text-align: right;
+				margin: 0;
+				padding: 0;
+
+				color: #4C5760;
+
+				flex: none;
+				order: 0;
+				flex-grow: 1;
+			}
+		}
+
+		.material-delete {
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			align-items: center;
+			padding: 7px;
+			gap: 10px;
+
+			width: 30px;
+			height: 30px;
+
+			border-radius: $border-radius;
+
+			flex: none;
+			order: 3;
+			flex-grow: 0;
+
+			&:hover {
+				background-color: #light-bg-color;
+			}
+
+			span {
+				width: 30px;
+				height: 30px;
+
+				flex: none;
+				order: 0;
+				flex-grow: 0;
+			}
+		}
+
+		.material-button {
+			box-sizing: border-box;
+
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			align-items: center;
+
+			flex: none;
+			flex-grow: 0;
+			z-index: 4;
+		}
+	}
+}
+
+.material-panel {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	padding: 24px 32px;
+	gap: 16px;
+	isolation: isolate;
+
+	width: 296px;
+	height: auto;
+
+	background: #F2E9DA;
+	border-radius: 12px;
+
+	flex: none;
+	order: 1;
+	flex-grow: 0;
+
+	.panel-title {
+		flex: none;
+		align-self: stretch;
+		flex-grow: 0;
+		z-index: 0;
+		margin: 0;
+		padding: 0;
+
+		p {
+			font-weight: 700;
+			font-size: 24px;
+
+			color: $text-color;
+
+			margin: 0;
+		}
+	}
+
+	.panel-content {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		align-items: flex-start;
+		padding: 0px;
+		gap: 16px;
+
+		width: 296px;
+		height: auto;
+
+		flex: none;
+		flex-grow: 0;
+		z-index: 1;
+	}
+
+	.panel-item {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding: 0px;
+
+		width: 88px;
+		height: 100px;
+
+		flex: none;
+		flex-grow: 0;
+
+		.panel-item-img {
+			width: 88px;
+			height: 88px;
+
+			background: $light-bg-color;
+			border: 1px solid $text-color;
+			border-radius: 100px;
+
+			flex: none;
+			order: 0;
+			flex-grow: 0;
+			margin: -12px 0px;
+		}
+
+		.panel-item-pill {
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			align-items: center;
+			padding: 0px 15px;
+			gap: 10px;
+
+			width: 29px;
+			height: 24px;
+
+			font-size: 16px;
+
+			color: #FFFFFF;
+			background: $tertiary-color;
+			border-radius: 100px;
+
+
+			flex: none;
+			order: 1;
+			flex-grow: 0;
+		}
+	}
+}
+
+// Mobile compatiblity section
+// WIP; need to shrink item card size
+// Current min-width for app is 900px
+
+@media screen and (max-width: 900px) {
+	main {
+		flex-direction: column-reverse;
+		align-items: center;
+	}
+}
