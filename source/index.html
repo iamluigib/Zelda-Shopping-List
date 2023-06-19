@@ -24,7 +24,6 @@
 			<div class="item-card">
 				<div class="stars">
 					<input type="radio" id="star1" name="rating" value="1" /><input type="radio" id="star2" name="rating" value="2" /><input type="radio" id="star3" name="rating" value="3" /><input type="radio" id="star4" name="rating" value="4" />
-
 					<label for="star1" aria-label="Banana">1 star</label><label for="star2">2 stars</label><label for="star3">3 stars</label><label for="star4">4 stars</label>
 				</div>
 				<input type="text" placeholder="Item name..." maxlength="32" class="item-card-title"></input>
@@ -50,11 +49,41 @@
 						<button type="button" class="material-delete"><span class="material-icons">delete</span></button>
 					</div>
 				</div>
-
 				<button href="#" class="btn btn-edgeless add-material-btn">Add material <span class="material-icons">add</span></button>
 			</div>
 
-			<div>
+			<div class="item-card">
+				<div class="stars">
+					<input type="radio" id="star1" name="rating" value="1" /><input type="radio" id="star2" name="rating" value="2" /><input type="radio" id="star3" name="rating" value="3" /><input type="radio" id="star4" name="rating" value="4" />
+					<label for="star1" aria-label="Banana">1 star</label><label for="star2">2 stars</label><label for="star3">3 stars</label><label for="star4">4 stars</label>
+				</div>
+				<input type="text" placeholder="Item name..." maxlength="32" class="item-card-title"></input>
+				<div class="item-card-materials">
+					<div class="item-card-materials-labels">
+						<p>Material Name</p>
+						<p>Qty</p>
+					</div>
+					<div class="material">
+						<img src="https://botw-compendium.herokuapp.com/api/v2/entry/lynel/image" alt="lynel" class="material-img">
+						<input type="text" class="material-name" placeholder="Material name..."></input>
+						<div class="counter">
+							<input type="number" class="counter-number" id="item-1-material-1-number" min="1" max="999" value="1"></input>
+							<div class="arrow-container">
+								<button class="arrow-btn" id="up-arrow" onclick="this.parentNode.parentNode.querySelector('input[type=number]').stepUp()">
+									<span class="material-icons">arrow_drop_up</span>
+								</button>
+								<button class="arrow-btn" id="down-arrow" onclick="this.parentNode.parentNode.querySelector('input[type=number]').stepDown()">
+									<span class="material-icons">arrow_drop_down</span>
+								</button>
+							</div>
+						</div>
+						<button type="button" class="material-delete"><span class="material-icons">delete</span></button>
+					</div>
+				</div>
+				<button href="#" class="btn btn-edgeless add-material-btn">Add material <span class="material-icons">add</span></button>
+			</div>
+
+			<div class="add-item-btn-container">
 				<button href="#" class="btn">Add item <span class="material-icons">add</span></button>
 			</div>
 		</section>
@@ -118,7 +147,15 @@
 							</ul>
 						</div>
 						<div class="material-card-items">
-
+							<h4>Material Needed By</h4>
+							<ul>
+								<li>
+									<p>Zora Armor</p>
+								</li>
+								<li>
+									<p>Champion's Tunic</p>
+								</li>
+							</ul>
 						</div>
 					</div>
 
