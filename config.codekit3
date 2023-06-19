@@ -7,7 +7,7 @@
       "uuidString" : "0D3A34C2-2A4F-4A7C-9327-8BC4F8DB2AB2"
     }
   ],
-  "creatorBuild" : "34472",
+  "creatorBuild" : "34484",
   "files" : {
     "\/.gitignore" : {
       "cB" : 0,
@@ -1122,7 +1122,7 @@
         "active" : 0
       },
       "no-unused-vars" : {
-        "active" : 1,
+        "active" : 0,
         "optionString" : "{'vars': 'all', 'args': 'after-used', 'caughtErrors': 'none', 'ignoreRestSiblings': false}"
       },
       "no-use-before-define" : {
@@ -1638,7 +1638,7 @@
       "moduleType" : 2,
       "removeComments" : 0,
       "sourceMapStyle" : 0,
-      "targetECMAVersion" : 0
+      "targetECMAVersion" : 2018
     },
     "languageDefaultsUserDefined" : [
 
@@ -1694,7 +1694,10 @@
     "skippedFoldersString" : "log, _logs, logs, _cache, cache, .idea, \/storage\/framework\/sessions, node_modules",
     "sourceFolderName" : "source",
     "susyVersion" : 3,
+    "tsAllowArbitraryExtensions" : 0,
+    "tsAllowImportingTSExtensions" : 0,
     "tsAllowSyntheticDefaultImports" : 0,
+    "tsAllowUMDGlobalAccess" : 0,
     "tsAllowUnreachableCode" : 0,
     "tsAllowUnusedLabels" : 0,
     "tsAlwaysStrict" : 0,
@@ -1703,36 +1706,36 @@
     "tsEmitDecoratorMetadata" : 0,
     "tsESModuleInterop" : 0,
     "tsExactOptionalPropertyTypes" : 0,
+    "tsExperimentalDecorators" : 0,
     "tsForceConsistentCasingInFileNames" : 0,
     "tsImportHelpers" : 0,
     "tsIsolatedModules" : 0,
     "tsJSXFactory" : "React.createElement",
-    "tsKeyofStringsOnly" : 0,
     "tsNoEmitHelpers" : 0,
     "tsNoFallthroughCasesInSwitch" : 0,
     "tsNoImplicitAny" : 0,
     "tsNoImplicitOverride" : 0,
     "tsNoImplicitReturns" : 0,
     "tsNoImplicitThis" : 0,
-    "tsNoImplicitUseStrict" : 0,
     "tsNoLib" : 0,
     "tsNoPropertyAccessFromIndexSignature" : 0,
     "tsNoResolve" : 0,
-    "tsNoStrictGenericChecks" : 0,
     "tsNoUncheckedIndexAccess" : 0,
     "tsNoUnusedLocals" : 0,
     "tsNoUnusedParameters" : 0,
     "tsPreserveConstEnums" : 0,
     "tsPreserveSymlinks" : 0,
     "tsResolveJsonModule" : 0,
+    "tsSkipDefaultLibCheck" : 0,
     "tsSkipLibCheck" : 0,
+    "tsStrictBindCallApply" : 0,
     "tsStrictFunctionTypes" : 0,
     "tsStrictNullChecks" : 0,
     "tsStrictPropertyInitialization" : 0,
     "tsStripInternal" : 0,
-    "tsSuppressExcessPropertyErrors" : 0,
-    "tsSuppressImplicitAnyIndexErrors" : 0,
+    "tsUseDefineForClassFields" : 0,
     "tsUseUnknownInCatchVariables" : 0,
+    "tsVerbatimModuleSyntax" : 0,
     "uglifyDefinesString" : "",
     "uglifyFlags2" : {
       "arguments" : {

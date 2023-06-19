@@ -8,7 +8,7 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<link href="style/main.css" rel="stylesheet">
 </head>
 
@@ -22,100 +22,108 @@
 	<main>
 		<section>
 			<div class="item-card">
-				<div class="item-card-title">
-					<p>Zora Armor</p>
-				</div>
+				<div class="stars">
+					<input type="radio" id="star1" name="rating" value="1" /><input type="radio" id="star2" name="rating" value="2" /><input type="radio" id="star3" name="rating" value="3" /><input type="radio" id="star4" name="rating" value="4" />
 
-				<div class="material">
-					<img src="https://www.models-resource.com/resources/big_icons/30/29612.png" alt="opal" class="material-img">
-					<div class="material-name">
-						<p>Opal</p>
-					</div>
-					<div class="material-amount">
-						<p>3</p>
-					</div>
-					<div class="material-delete">
-						<span class="material-symbols-outlined">
-							delete
-						</span>
-					</div>
+					<label for="star1" aria-label="Banana">1 star</label><label for="star2">2 stars</label><label for="star3">3 stars</label><label for="star4">4 stars</label>
 				</div>
-
-				<div class="material">
-					<img src="https://www.models-resource.com/resources/big_icons/30/29612.png" alt="opal" class="material-img">
-					<div class="material-name">
-						<p>Opal</p>
+				<input type="text" placeholder="Item name..." maxlength="32" class="item-card-title"></input>
+				<div class="item-card-materials">
+					<div class="item-card-materials-labels">
+						<p>Material Name</p>
+						<p>Qty</p>
 					</div>
-					<div class="material-amount">
-						<p>3</p>
-					</div>
-					<div class="material-delete">
-						<span class="material-symbols-outlined">
-							delete
-						</span>
+					<div class="material">
+						<img src="https://botw-compendium.herokuapp.com/api/v2/entry/lynel/image" alt="lynel" class="material-img">
+						<input type="text" class="material-name" placeholder="Material name..."></input>
+						<div class="counter">
+							<input type="number" class="counter-number" id="item-1-material-1-number" min="1" max="999" value="1"></input>
+							<div class="arrow-container">
+								<button class="arrow-btn" id="up-arrow" onclick="this.parentNode.parentNode.querySelector('input[type=number]').stepUp()">
+									<span class="material-icons">arrow_drop_up</span>
+								</button>
+								<button class="arrow-btn" id="down-arrow" onclick="this.parentNode.parentNode.querySelector('input[type=number]').stepDown()">
+									<span class="material-icons">arrow_drop_down</span>
+								</button>
+							</div>
+						</div>
+						<button type="button" class="material-delete"><span class="material-icons">delete</span></button>
 					</div>
 				</div>
 
-				<div class="material">
-					<img src="https://www.models-resource.com/resources/big_icons/30/29612.png" alt="opal" class="material-img">
-					<div class="material-name">
-						<p>Opal</p>
-					</div>
-					<div class="material-amount">
-						<p>3</p>
-					</div>
-					<div class="material-delete">
-						<span class="material-symbols-outlined">
-							delete
-						</span>
-					</div>
-				</div>
-
-				<div class="material-button">
-					<a href="#" class="btn-secondary">Add material</a>
-				</div>
+				<button href="#" class="btn btn-edgeless add-material-btn">Add material <span class="material-icons">add</span></button>
 			</div>
 
 			<div>
-				<a href="#" class="btn-primary">Add an item</a>
+				<button href="#" class="btn">Add item <span class="material-icons">add</span></button>
 			</div>
 		</section>
 
 		<aside>
 			<div class="material-panel">
-				<div class="panel-title">
-					<p>Materials Needed</p>
-				</div>
+				<h2 class="panel-title">Materials Needed</h2>
 				<div class="panel-content">
 					<div class="panel-item">
-						<img src="https://www.models-resource.com/resources/big_icons/30/29612.png" alt="opal" class="panel-item-img">
+						<img src="https://botw-compendium.herokuapp.com/api/v2/entry/apple/image" alt="apple" class="panel-item-img">
 						<div class="panel-item-pill">
 							<p>2/4</p>
 						</div>
 					</div>
 
 					<div class="panel-item">
-						<img src="https://www.models-resource.com/resources/big_icons/30/29612.png" alt="opal" class="panel-item-img">
+						<img src="https://botw-compendium.herokuapp.com/api/v2/entry/white-maned_lynel/image" alt="white-maned lynel" class="panel-item-img">
 						<div class="panel-item-pill">
 							<p>2/4</p>
 						</div>
 					</div>
 
 					<div class="panel-item">
-						<img src="https://www.models-resource.com/resources/big_icons/30/29612.png" alt="opal" class="panel-item-img">
+						<img src="https://botw-compendium.herokuapp.com/api/v2/entry/lizalfos/image" alt="lizalfos" class="panel-item-img">
 						<div class="panel-item-pill">
 							<p>2/4</p>
 						</div>
 					</div>
 
-					<div class="panel-item">
-						<img src="https://www.models-resource.com/resources/big_icons/30/29612.png" alt="opal" class="panel-item-img">
-						<div class="panel-item-pill">
-							<p>2/4</p>
+					<div class="material-card">
+						<div class="material-card-counter">
+							<p class="counter-title">In inventory:</p>
+							<div class="counter">
+								<input type="number" class="counter-number" id="material-1-number" min="1" max="999" value="1"></input>
+								<div class="arrow-container">
+									<button class="arrow-btn" id="up-arrow" onclick="this.parentNode.parentNode.querySelector('input[type=number]').stepUp()">
+										<span class="material-icons">arrow_drop_up</span>
+									</button>
+									<button class="arrow-btn" id="down-arrow" onclick="this.parentNode.parentNode.querySelector('input[type=number]').stepDown()">
+										<span class="material-icons">arrow_drop_down</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="material-card-header">
+							<h3 class="material-card-title">Lynel horn</h3>
+							<div class="material-card-subheader">
+								<p class="material-card-subtitle">Monster Part</p>
+								<span class="material-card-value"><img src="https://www.pngkey.com/png/full/172-1721620_zelda-rupees-png-zelda-green-rupee-png.png" alt="rupee">250</span>
+							</div>
+						</div>
+						<div class="material-card-info">
+							<p>Lynel Horns are Monster Parts that are dropped by all types of Lynels upon their defeats. They're too hard for most blades to scratch, but they can be combined with critters in a Cooking Pot to make Elixirs. They can also be used at the Kochi Dye Shop to make White Dye or exchanged for Mon at the Fang and Bone.</p>
+						</div>
+						<div class="material-card-locations">
+							<h4>Common Locations</h4>
+							<ul>
+								<li>Faron Forest</li>
+								<li>Hyrule Field</li>
+								<li>Zora's Domain</li>
+							</ul>
+						</div>
+						<div class="material-card-items">
+
 						</div>
 					</div>
+
 					<div class="panel-item">
-						<img src="https://www.models-resource.com/resources/big_icons/30/29612.png" alt="opal" class="panel-item-img">
+						<img src="https://botw-compendium.herokuapp.com/api/v2/entry/hearty_durian/image" alt="hearty durian" class="panel-item-img">
 						<div class="panel-item-pill">
 							<p>2/4</p>
 						</div>
