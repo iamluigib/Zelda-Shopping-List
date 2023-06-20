@@ -20,68 +20,55 @@
 	</header>
 
 	<main>
-		<section>
-			<div id="parent-container"></div>
+		<section id="item-column">
+			<div id="item-container"></div>
 			<!-- Reference item card -->
 			<!--
 			<div class="item-card">
-				<div class="stars">
-					<input type="radio" id="star1" name="rating" value="1" /><input type="radio" id="star2" name="rating" value="2" /><input type="radio" id="star3" name="rating" value="3" /><input type="radio" id="star4" name="rating" value="4" />
-					<label for="star1" aria-label="Banana">1 star</label><label for="star2">2 stars</label><label for="star3">3 stars</label><label for="star4">4 stars</label>
-				</div>
-				<input type="text" placeholder="Item name..." maxlength="32" class="item-card-title"></input>
-				<div class="item-card-materials">
-					<div class="item-card-materials-labels">
+				<input type="text" placeholder="Item name..." maxlength="32" class="item-name"></input>
+				<div class="item-materials">
+					<div class="materials-labels">
 						<p>Material Name</p>
 						<p>Qty</p>
 					</div>
 					<div class="material">
 						<img src="https://botw-compendium.herokuapp.com/api/v2/entry/lynel/image" alt="lynel" class="material-img">
 						<input type="text" class="material-name" placeholder="Material name..."></input>
-						<div class="counter">
-							<input type="number" class="counter-number" id="item-1-material-1-number" min="1" max="999" value="1"></input>
-							<div class="arrow-container">
-								<button class="arrow-btn" id="up-arrow" onclick="this.parentNode.parentNode.querySelector('input[type=number]').stepUp()">
+						<div class="material-counter">
+							<input type="number" class="counter-number" id="materials-needed" min="1" max="999" value="1"></input>
+							<div class="counter-btn-container">
+								<button class="counter-btn" onclick="this.parentNode.parentNode.querySelector('input[type=number]').stepUp()">
 									<span class="material-icons">arrow_drop_up</span>
 								</button>
-								<button class="arrow-btn" id="down-arrow" onclick="this.parentNode.parentNode.querySelector('input[type=number]').stepDown()">
+								<button class="counter-btn" onclick="this.parentNode.parentNode.querySelector('input[type=number]').stepDown()">
 									<span class="material-icons">arrow_drop_down</span>
 								</button>
 							</div>
 						</div>
-						<button type="button" class="material-delete"><span class="material-icons">delete</span></button>
+						<button type="button" id="delete-material"><span class="material-icons">delete</span></button>
 					</div>
 				</div>
-				<button href="#" class="btn btn-edgeless add-material-btn" id="add-material-btn">Add material <span class="material-icons">add</span></button>
+				<button class="btn btn-edgeless" id="add-material">Add material <span class="material-icons">add</span></button>
+			</div
+			<div id="add-item-container">
+				<button href="#" class="btn" id="add-item">Add item <span class="material-icons">add</span></button>
+-->
 			</div>
-	-->
-			<div class="add-item-btn-container">
-				<button href="#" class="btn" id="add-item-btn">Add item <span class="material-icons">add</span></button>
-			</div>
+
+			<button type="button" class="btn" onclick="addItemCard()">Add Item</button>
 		</section>
 
-		<aside>
+		<aside id="material-column">
 			<div class="material-panel">
 				<h2 class="panel-title">Materials Needed</h2>
-				<div class="panel-content">
+				<div class="panel-content" id="panel-content">
+
+					<!-- Reference materials needed panel -->
+					<!--
 					<div class="panel-item">
 						<img src="https://botw-compendium.herokuapp.com/api/v2/entry/apple/image" alt="apple" class="panel-item-img">
-						<div class="panel-item-pill">
-							<p>2/4</p>
-						</div>
-					</div>
-
-					<div class="panel-item">
-						<img src="https://botw-compendium.herokuapp.com/api/v2/entry/white-maned_lynel/image" alt="white-maned lynel" class="panel-item-img">
-						<div class="panel-item-pill">
-							<p>2/4</p>
-						</div>
-					</div>
-
-					<div class="panel-item">
-						<img src="https://botw-compendium.herokuapp.com/api/v2/entry/lizalfos/image" alt="lizalfos" class="panel-item-img">
-						<div class="panel-item-pill">
-							<p>2/4</p>
+						<div class="panel-item-label">
+							<p>0/4</p>
 						</div>
 					</div>
 
@@ -90,11 +77,11 @@
 							<p class="counter-title">In inventory:</p>
 							<div class="counter">
 								<input type="number" class="counter-number" id="material-1-number" min="1" max="999" value="1"></input>
-								<div class="arrow-container">
-									<button class="arrow-btn" id="up-arrow" onclick="this.parentNode.parentNode.querySelector('input[type=number]').stepUp()">
+								<div class="counter-btn-container">
+									<button class="coutner-btn" id="up-arrow" onclick="this.parentNode.parentNode.querySelector('input[type=number]').stepUp()">
 										<span class="material-icons">arrow_drop_up</span>
 									</button>
-									<button class="arrow-btn" id="down-arrow" onclick="this.parentNode.parentNode.querySelector('input[type=number]').stepDown()">
+									<button class="coutner-btn" id="down-arrow" onclick="this.parentNode.parentNode.querySelector('input[type=number]').stepDown()">
 										<span class="material-icons">arrow_drop_down</span>
 									</button>
 								</div>
@@ -131,12 +118,7 @@
 						</div>
 					</div>
 
-					<div class="panel-item">
-						<img src="https://botw-compendium.herokuapp.com/api/v2/entry/hearty_durian/image" alt="hearty durian" class="panel-item-img">
-						<div class="panel-item-pill">
-							<p>2/4</p>
-						</div>
-					</div>
+-->
 				</div>
 			</div>
 		</aside>

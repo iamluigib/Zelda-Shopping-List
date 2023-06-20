@@ -13,6 +13,7 @@ $standard-shadow: 0px 4px 8px rgba(119, 119, 119, 0.4);
 
 $border-radius: 6px;
 
+// This is to remove the default up/down arrows for number inputs so custom ones can be added
 input[type="number"] {
 	-webkit-appearance: textfield;
 	-moz-appearance: textfield;
@@ -24,6 +25,7 @@ input[type=number]::-webkit-outer-spin-button {
 	-webkit-appearance: none;
 }
 
+// Page setup
 html {
 	background-color: $bg-color;
 	font-family: 'Poppins',
@@ -48,7 +50,7 @@ main {
 	flex-grow: 0;
 }
 
-section {
+#item-column {
 	display: flex;
 	flex-direction: column-reverse;
 	justify-content: center;
@@ -61,7 +63,7 @@ section {
 	flex-grow: 0;
 }
 
-#parent-container {
+#item-container {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -138,7 +140,7 @@ h4 {
 .btn {
 	display: flex;
 	height: auto;
-	width: 100%;
+	width: 528px;
 	padding: 4px 0;
 	justify-content: center;
 	align-items: center;
@@ -205,42 +207,9 @@ h4 {
 
 	box-shadow: $standard-shadow;
 	border-radius: $border-radius*2;
-
-	flex: none;
-	flex-grow: 0;
 }
 
-$star-size: 16px;
-$color: gold;
-
-@mixin set-star($border: $color, $fill: transparent) {
-	background: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cpath fill='#{$fill}' stroke='#{$border}' stroke-width='38' d='M259.216 29.942L330.27 173.92l158.89 23.087L374.185 309.08l27.145 158.23-142.114-74.698-142.112 74.698 27.146-158.23L29.274 197.007l158.89-23.088z' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
-}
-
-.stars input {
-	position: absolute;
-	clip: rect(0, 0, 0, 0);
-}
-
-.stars label {
-	box-sizing: border-box;
-	display: inline-block;
-	margin-right: 6px;
-	height: $star-size;
-	width: $star-size;
-	@include set-star;
-	font-size: 0;
-	cursor: pointer;
-}
-
-.stars input:nth-child(1):checked ~ label:nth-of-type(-n + 1),
-.stars input:nth-child(2):checked ~ label:nth-of-type(-n + 2),
-.stars input:nth-child(3):checked ~ label:nth-of-type(-n + 3),
-.stars input:nth-child(4):checked ~ label:nth-of-type(-n + 4) {
-	@include set-star($color, $color);
-}
-
-.item-card-title {
+.item-name {
 	margin: 0 auto;
 
 	width: 474px;
@@ -274,7 +243,7 @@ $color: gold;
 	}
 }
 
-.item-card-materials {
+.item-materials {
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
@@ -286,7 +255,7 @@ $color: gold;
 	flex-grow: 0;
 }
 
-.item-card-materials-labels {
+.materials-labels {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
@@ -385,7 +354,7 @@ $color: gold;
 	}
 }
 
-.counter {
+.material-counter {
 	display: flex;
 	flex-direction: row;
 	justify-content: flex-end;
@@ -434,7 +403,7 @@ $color: gold;
 	}
 }
 
-.arrow-container {
+.counter-btn-container {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -450,7 +419,7 @@ $color: gold;
 	flex-grow: 0;
 }
 
-.arrow-btn {
+.counter-btn {
 	height: 15px;
 	width: 15px;
 	padding: 0;
@@ -472,7 +441,7 @@ $color: gold;
 	}
 }
 
-.material-delete {
+#delete-material {
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
@@ -511,13 +480,13 @@ $color: gold;
 	}
 }
 
-.add-material-btn {
+#add-material {
 	padding: 8px 0;
 
 	width: 50%;
 }
 
-.add-item-btn-container {
+#add-item-container {
 	width: 528px;
 }
 
@@ -593,7 +562,7 @@ $color: gold;
 		transition: ease-out 0.15s;
 	}
 
-	.panel-item-pill {
+	.panel-item-label {
 		display: flex;
 		flex-direction: row;
 		justify-content: center;
@@ -624,7 +593,7 @@ $color: gold;
 		transition: ease-out 0.15s;
 	}
 
-	&:hover .panel-item-pill {
+	&:hover .panel-item-label {
 		box-shadow: $standard-shadow;
 
 		transition: ease-out 0.15s;
