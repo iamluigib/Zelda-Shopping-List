@@ -50,6 +50,19 @@ main {
 
 section {
 	display: flex;
+	flex-direction: column-reverse;
+	justify-content: center;
+	align-items: flex-start;
+	padding: 0px;
+	gap: 16px;
+
+	flex: none;
+	order: 1;
+	flex-grow: 0;
+}
+
+#parent-container {
+	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: flex-start;
@@ -505,7 +518,7 @@ $color: gold;
 }
 
 .add-item-btn-container {
-	width: 100%;
+	width: 528px;
 }
 
 // Right column
